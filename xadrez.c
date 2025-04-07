@@ -4,32 +4,32 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-void MoverTorre(int i){
-    if(i>0){
-        printf("Direita\n");
-        MoverTorre(i-1);
+void MoverTorre(int i){       //"i" assume o valor condicionado na função no codigo principal
+    if(i>0){                  
+        printf("Direita\n");  //imprime  o movimento direita
+        MoverTorre(i-1);      //a função chama ela mesma decrementando 1 a cada vez 
     }
 }
 
-void MoverBispo(int j){
+void MoverBispo(int j){      //"j" assume o valor condicionado na função no codigo principal
     if (j>0){
         
-        for (int k=0; k<1; k++){
-            printf("Cima ");
+        for (int k=0; k<1; k++){ 
+            printf("Cima ");         //imprime  o movimento cima
             for (int l=0; l<1; l++){
-                printf("Direita\n");
+                printf("Direita\n"); //imprime  o movimento direita
             }
             
         } 
-        MoverBispo(j-1);
+        MoverBispo(j-1);     //a função chama ela mesma decrementando 1 a cada vez 
     }
     
 }
 
-void MoverRainha(int k){
+void MoverRainha(int k){   //"k" assume o valor condicionado na função no codigo principal
     if(k>0){
-        printf("esquerda\n");
-        MoverRainha(k-1);
+        printf("esquerda\n"); //imprime  o movimento esquerda
+        MoverRainha(k-1);     //a função chama ela mesma decrementando 1 a cada vez
     }
 }
 
